@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17618590.svg)](https://doi.org/10.5281/zenodo.17618590)
+
 # M-TriX: Dynamic Balance Architecture  
 A Hybrid-Causal Neural Architecture for Stability, Efficiency, and Interpretability
 
