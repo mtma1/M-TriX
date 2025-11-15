@@ -1,0 +1,118 @@
+M-TriX (v0.6.1) — Reproducibility Notes
+Author: Mohammed M. Alanazi
+Paper DOI (Zenodo): https://zenodo.org/records/17613192
+
+Code Version: v0.6.1 (Master Proof)
+
+This document provides the exact steps required to reproduce all experimental results reported in the paper:
+
+“M-TriX: A Hybrid-Causal Neural Architecture for Stability, Efficiency, and Interpretability.”
+
+The included code (notebook or .py file) corresponds to the Master Proof (v0.6.1) and implements:
+
+Noise-Augmented Training (v0.6.0 design)
+
+Sweep Test (Reinforced Dual Collapse)
+
+Noise Robustness Test (M-TriX vs Dense)
+
+Visual Proof (Clean Filter Hypothesis)
+
+All results in the paper can be reproduced from this file alone.
+
+1. Environment
+
+The experiments were executed using:
+
+Python ≥ 3.10
+
+TensorFlow ≥ 2.12
+
+NumPy
+
+Matplotlib
+
+GPU recommended (Colab T4 or A100)
+
+Install the required packages:
+
+pip install tensorflow numpy matplotlib
+
+2. Running the Experiments
+
+Run the notebook (.ipynb) or the Python script (.py) exactly as provided.
+No modifications or additional files are needed.
+
+The script automatically performs:
+
+Downloading the MNIST dataset
+
+Applying 30% random pixel noise
+
+Training M-TriX on noisy data
+
+Evaluating on:
+
+Clean test set
+
+Noisy test set
+
+Forced-p collapse sweep
+
+Generating all figures used in the paper
+
+3. Outputs Produced
+
+The script generates:
+
+A. Training Curves
+
+Training vs validation loss
+
+Training vs validation accuracy
+
+p-mean evolution curve
+
+B. Sweep Test (Dual Collapse)
+
+Accuracy vs forced-p curve
+
+Learned sweet spot
+
+Dense collapse
+
+Blackout collapse
+
+C. Noise Robustness Test
+
+Dense accuracy on noisy data
+
+M-TriX accuracy on noisy data
+
+Stability confirmation
+
+D. Visual Proof
+
+Clean MNIST image
+
+Noisy version
+
+Corresponding p-map visualization
+
+4. Notes
+
+This file serves as the official reproducibility reference for the paper.
+
+No extra hyperparameters or tuning are required.
+
+All overrides (blackout, forced-p, p-map extraction) are implemented inside the script.
+
+Results are deterministic due to fixed random seeds.
+
+5. Citation
+
+If you use this code or architecture, please cite:
+
+Alanazi, Mohammed M. (2025).
+M-TriX: A Hybrid-Causal Neural Architecture.
+Zenodo. https://zenodo.org/records/17613192
